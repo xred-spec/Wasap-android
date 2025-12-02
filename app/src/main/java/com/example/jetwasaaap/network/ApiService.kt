@@ -20,4 +20,7 @@ interface ApiService {
 
     @POST("create-mensaje")
     suspend fun sendMensaje(@Body request: MensajesRequest): Response<MensajesDTO>
+
+    @GET("get-usuario/{id}")
+    suspend fun getUsuario(@Path("id")id: Int): Response<UsuariosDTO>
 }
